@@ -1,10 +1,10 @@
 # YouTube Health Videos Fact Checker
 
-An MVP AI-powered service that analyzes YouTube videos about fitness and health, extracts factual claims, and provides neutral, evidence-based context with links for further reading.
+An MVP AI-powered service that analyzes **YouTube videos** about **fitness and health**, extracts factual claims, and provides neutral, evidence-based context with links for further reading.
 
 >⚠️ This tool does not provide medical advice. Its goal is contextualization, not diagnosis or prescriptions.
 
-## 🎯 What problem does this solve?
+## 🎯 What problem does it solve?
 
 Health and fitness content on YouTube often contains:
 
@@ -20,9 +20,9 @@ This service:
 - suggests reputable sources for further reading
 
 It is designed as a **backend service**, suitable for:
-- internal moderation tools
-- content review pipelines
-- educational or fact-checking applications
+- moderation tool
+- reputation scoring
+- content review
 
 ## 🧠 High-level architecture
 ```Client → FastAPI (/v1/analyze) → YouTube Transcript Fetcher → LLM Analysis (OpenAI Responses API) → Strict Structured JSON Output```
