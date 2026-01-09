@@ -7,7 +7,9 @@ from app.utils.retry import enforce_no_additional_properties
 
 def analyze_transcript(transcript: str) -> AnalyzeResponse:
     schema = AnalyzeResponse.model_json_schema()
+    print("Schema: ", schema)
     schema = enforce_no_additional_properties(schema)
+    print("Enforced schema:", schema)
 
     prompt = (
         "You are a neutral scientific explainer about fitness/health. "

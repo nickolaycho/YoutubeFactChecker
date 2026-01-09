@@ -34,7 +34,7 @@ def enforce_no_additional_properties(schema: dict) -> dict:
             for subschema in schema[key]:
                 enforce_no_additional_properties(subschema)
 
-    # IMPORTANT: handle definitions / $defs (this was missing)
+    # IMPORTANT: handle definitions / $defs
     for key in ("$defs", "definitions"):
         if key in schema and isinstance(schema[key], dict):
             for subschema in schema[key].values():

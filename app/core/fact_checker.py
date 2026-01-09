@@ -1,15 +1,15 @@
 from urllib.parse import urlparse, parse_qs, ParseResult
 from youtube_transcript_api import YouTubeTranscriptApi
-from functools import cached_property
 from app.core.llm import analyze_transcript
 from youtube_transcript_api._errors import TranscriptsDisabled, NoTranscriptFound
+from app.core.structured_output import AnalyzeResponse
 
 class FactChecker():
     def __init__(self, video_url: str):
         self.video_url:str = video_url
 
     @property
-    def result(self):
+    def result(self) -> AnalyzeResponse:
         # hard cap per evitare prompt enormi
         transcript = self.transcript[: 30000]
         return analyze_transcript(transcript)
