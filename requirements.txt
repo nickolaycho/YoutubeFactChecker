@@ -3,3 +3,4 @@ python-dotenv
 fastapi
 uvicorn
 youtube-transcript-api
+pytest
