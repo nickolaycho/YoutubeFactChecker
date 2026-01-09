@@ -73,7 +73,7 @@ It is designed as a **backend service**, suitable for:
 > http://127.0.0.1:8000/docs
 
 5. Experiment
-6. Click on the green *POST* button and provide a YouTube URL in the **Edit value** field:
+Click on the green *POST* button and provide a YouTube URL in the **Edit value** field:
 ```json
 {
   "url": "https://www.youtube.com/watch?v=VIDEO_ID"
